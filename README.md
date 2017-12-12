@@ -13,8 +13,7 @@ more to come
 
 ## Installation
 * Grab a Fastly API Key from your Fastly admin
-* `git clone https://github.com/fastly/soc/tree/master/fastly_splunk_app
-$SPLUNK_HOME/etc/apps/fastly` 
+* `git clone https://github.com/cuddlesec/fastly_splunk.git $SPLUNK_HOME/etc/apps/fastly` 
 * `cd $SPLUNK_HOME/etc/apps/fastly` and run `sudo ./setup.sh <FastLY API Key> <service ID>` for each serviceID to prepare for accepting ACL
 * Configure Fastly Splunk App and Fastly API Key
 * Start blocking
