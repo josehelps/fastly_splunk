@@ -1,0 +1,12 @@
+<setup>
+   <block title="Fastly Setup">
+  </block>
+
+  <block title="Enter your Fastly API Key" endpoint="fastly/conf" entity="setupentity">
+    <text>You must obtain a API Key from your admin with global access priv</text>
+    <input field="api_key">
+      <label>API Key</label>
+      <type>text</type>
+    </input>
+  </block>
+</setup>
