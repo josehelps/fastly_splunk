@@ -1,5 +1,6 @@
 ### Fastly + Splunk  
 provides Fastly Pre-Built Commands and Reports for Splunk
+![example](static/example.png)
 
 ## Description
 * Adds the `fastlyacl` search command to Splunk. This adds ACLs to a Edge dictionary called [fastly\_acl\_block] to the selected service. To read more on Edge dictionary please visit <https://docs.fastly.com/guides/edge-dictionaries/about-edge-dictionaries>. Note that an ACL can only hold 1000 entries at a time keep in mind of this when using this command. 
