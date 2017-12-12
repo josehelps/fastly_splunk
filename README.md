@@ -6,6 +6,11 @@ provides Fastly Pre-Built Commands and Reports for Splunk
 
 more to come 
 
+## Requirements
+* Grab a Fastly API Key from your Fastly admin
+* need to have `jq` install in the Splunk searchead `setup.sh` will run from
+* assumes local python has `re` and `json` package available by the system
+
 ## Installation
 * Grab a Fastly API Key from your Fastly admin
 * `git clone https://github.com/fastly/soc/tree/master/fastly_splunk_app
