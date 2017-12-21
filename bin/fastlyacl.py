@@ -9,7 +9,6 @@ import splunk.Intersplunk as si
 import splunk.entity as entity
 import splunk.mining.dcutils as dcu
 
-#API_KEY = 'OFkBeoK@2-YqJ3ZPWsA12P42cIQ_'
 logger = dcu.getLogger()
 
 class FastlyACL(object):
