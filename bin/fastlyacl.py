@@ -117,17 +117,11 @@ if __name__ == '__main__':
         # get session key from settings
         s_key = settings['sessionKey']
 
-        # retrive APIKey for Faroo from the setup entity
+        # retrive APIKey from the setup entity
         APIKey = getKey(s_key)
 
-        # faroo object
+        # fastly ACL object
         FastlyACL = FastlyACL(APIKey)
-
-        # set the serviceID we will be working in
-        if options['serviceid']:
-            FastlyACL.setServiceID(options['serviceid'])
-        else:
-            logger.exception("serviceID not provided")
 
         answers = []
         field_to_match = options['fieldname']
@@ -138,7 +132,13 @@ if __name__ == '__main__':
 
         for entry in results:
             if entry[field_to_match]:
-                response = FastlyACL.addACL(entry[field_to_match])
+                # set the serviceID we will be working in
+                if options['serviceid']:
+                    FastlyACL.setServiceID(options['serviceid'])
+                else:
+                    logger.exception("serviceID not provided")
+                    response = FastlyACL.addACL(entry[field_to_match])
+
                 answers.append({"response":response,"entry":entry[field_to_match]})
 #                print "Fastly Response,entry\n{0},{1}".format(response,entry[field_to_match])
         
